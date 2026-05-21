@@ -75,7 +75,7 @@ hydejack:
   use_lsi:             false
   cookies_banner:      false
   dark_mode:
-    dynamic: true
+    dynamic: false
     icon:    true
     always:  false
 
