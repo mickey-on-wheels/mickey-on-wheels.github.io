@@ -1,9 +1,14 @@
 * text=auto
 .gitattributes text eol=lf
+.gitignore text eol=lf
 Gemfile text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
 *.md text eol=lf
 *.html text eol=lf
+*.scss text eol=lf
 *.ico binary
 *.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary

@@ -2,8 +2,6 @@
 layout: list
 title: Mickey's Car Life
 slug: mickeys-car-life
-menu: true
-order: 5
 description: >
   Personal car life notes, ownership stories, and road memories.
 accent_image: /assets/img/sidebar-bg.jpg
