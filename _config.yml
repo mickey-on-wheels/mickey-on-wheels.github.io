@@ -74,7 +74,10 @@ hydejack:
   no_theme_color:      false
   use_lsi:             false
   cookies_banner:      false
-
+  dark_mode:
+    dynamic: true
+    icon:    true
+    always:  false
 
 # Collections
 # ========================================================================================
