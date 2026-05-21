@@ -1,0 +1,46 @@
+<script>
+  (function () {
+    function ready(fn) {
+      if (document.readyState !== 'loading') fn();
+      else document.addEventListener('DOMContentLoaded', fn);
+    }
+
+    ready(function () {
+      var menu = document.getElementById('_menu');
+      var sidebar = document.getElementById('_sidebar');
+      var desktopQuery = window.matchMedia('(min-width: 64em)');
+
+      var introSeen = false;
+      try {
+        introSeen = sessionStorage.getItem('mow:intro-seen') === 'true';
+      } catch (error) {}
+
+      if (sidebar && !introSeen) {
+        var intro = document.createElement('div');
+        intro.className = 'site-intro';
+        intro.innerHTML = '<div><h1>Mickey on Wheels</h1><p>Smiles per Gallon.</p></div>';
+        document.body.appendChild(intro);
+        try {
+          sessionStorage.setItem('mow:intro-seen', 'true');
+        } catch (error) {}
+        setTimeout(function () {
+          if (intro.parentNode) intro.parentNode.removeChild(intro);
+        }, 2200);
+      }
+
+      if (!menu) return;
+
+      menu.addEventListener('click', function (event) {
+        if (!desktopQuery.matches) return;
+        event.preventDefault();
+        document.body.classList.toggle('sidebar-expanded');
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          document.body.classList.remove('sidebar-expanded');
+        }
+      });
+    });
+  }());
+</script>

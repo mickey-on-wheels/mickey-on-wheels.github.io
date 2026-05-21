@@ -1,0 +1,126 @@
+.sidebar {
+  text-align: center;
+}
+
+.sidebar-about > h2,
+.sidebar-about > h1,
+.sidebar-about p,
+.sidebar-nav,
+.sidebar-social {
+  text-align: center;
+}
+
+.sidebar-nav > ul,
+.sidebar-nav > ul ul {
+  padding-left: 0;
+}
+
+.sidebar-nav > ul ul {
+  list-style: none;
+  margin: .15rem 0 .35rem;
+}
+
+.sidebar-nav > ul ul a.sidebar-nav-item {
+  font-size: .9rem;
+  font-weight: 400;
+  opacity: .82;
+}
+
+.sidebar-social > ul {
+  display: inline-block;
+}
+
+.site-intro {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-color: #16588E;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,.45)), url('/assets/img/sidebar-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+  transform-origin: left center;
+  animation: site-intro-collapse 1400ms cubic-bezier(.2,.7,.2,1) 350ms forwards;
+}
+
+.site-intro h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+.site-intro p {
+  margin: .5rem 0 0;
+  color: rgba(255,255,255,.82);
+}
+
+@keyframes site-intro-collapse {
+  0% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+  60% {
+    opacity: 1;
+    clip-path: inset(0 calc(100% - 18rem) 0 0);
+  }
+  100% {
+    opacity: 0;
+    clip-path: inset(0 calc(100% - 18rem) 0 0);
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  #_menu {
+    position: fixed;
+    left: .25rem;
+    top: .25rem;
+    z-index: 30;
+    color: #fff!important;
+    text-shadow: 0 1px 2px rgba(0,0,0,.35);
+  }
+
+  body.sidebar-expanded {
+    overflow: hidden;
+  }
+
+  body.sidebar-expanded hy-drawer {
+    width: 100vw;
+    right: 0;
+    z-index: 15;
+  }
+
+  body.sidebar-expanded .sidebar {
+    min-height: 100vh;
+  }
+
+  body.sidebar-expanded .sidebar-bg {
+    position: fixed;
+  }
+
+  body.sidebar-expanded .sidebar-sticky {
+    position: fixed;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: 24rem;
+    max-width: calc(100vw - 3rem);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-intro {
+    animation: none;
+    display: none;
+  }
+}
