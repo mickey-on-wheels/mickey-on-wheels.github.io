@@ -30,7 +30,7 @@ paginate_path:         /page-:num/
 
 remote_theme:          hydecorp/hydejack@v9.2.1
 
-accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:          /assets/img/cover_img.jpg
 accent_color:          '#16588E'
 
 google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
@@ -40,9 +40,9 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 menu:
   - title:             Autonomous Driving
     url:               /category/autonomous-driving/
-  - title:             Tech Trends
+  - title:             "&nbsp;&nbsp;Tech Trends"
     url:               /tag/tech-trends/
-  - title:             Paper Review
+  - title:             "&nbsp;&nbsp;Paper Review"
     url:               /tag/paper-review/
   - title:             Motorsport
     url:               /category/motorsport/
