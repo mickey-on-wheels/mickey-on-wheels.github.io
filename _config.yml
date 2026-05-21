@@ -40,10 +40,11 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 menu:
   - title:             Autonomous Driving
     url:               /category/autonomous-driving/
-  - title:             "&nbsp;&nbsp;Tech Trends"
-    url:               /tag/tech-trends/
-  - title:             "&nbsp;&nbsp;Paper Review"
-    url:               /tag/paper-review/
+    submenu:
+      - title:         Tech Trends
+        url:           /category/tech-trends/
+      - title:         Paper Review
+        url:           /category/paper-review/
   - title:             Motorsport
     url:               /category/motorsport/
   - title:             Mickey's Car Life
