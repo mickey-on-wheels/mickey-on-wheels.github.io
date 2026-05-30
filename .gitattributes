@@ -1,15 +1,25 @@
+# Default: text files are normalized in Git
 * text=auto
-.gitattributes text eol=lf
-.gitignore text eol=lf
-Gemfile text eol=lf
-*.yml text eol=lf
-*.yaml text eol=lf
-*.md text eol=lf
-*.html text eol=lf
-*.scss text eol=lf
-*.js text eol=lf
-*.ico binary
-*.png binary
-*.jpg binary
-*.jpeg binary
-*.gif binary
+
+# Web / Jekyll / Markdown files: always LF
+*.md     text eol=lf
+*.html   text eol=lf
+*.css    text eol=lf
+*.scss   text eol=lf
+*.js     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.json   text eol=lf
+
+# Scripts
+*.sh     text eol=lf
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+
+# Binary files
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
+*.pdf    binary
