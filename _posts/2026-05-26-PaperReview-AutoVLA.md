@@ -9,7 +9,7 @@ description: >
   This is a work in progress paper review for AutoVLA, a vision-language-action model for autonomous driving.
 hide_description: false
 sitemap: false
-image: false
+image: /_post_images/2026-05-26-PaperReview-AutoVLA/overview.png
 ---
 # Paper Review - AutoVLA (WIP)
 
@@ -46,18 +46,36 @@ image: false
 [^mode-collapse]: Mode collapse refers to a situation where a generative model produces limited diversity in its outputs, often generating the same or similar outputs repeatedly, which can be problematic in tasks like action generation for autonomous driving.
 
 ### AutoVLA: Key Contributions
-* **Directly integrates physical action tokens into a pretrained VLM backbone**
-  * Seamlessly integrates reasoning and action generation
-  * Adaptive switch between direct action generation and CoT reasoning
-* **Two-stage training**
-  * (1) Suprervised Fine-Tuning (SFT)
-  * (2) Reinforcement Fine-Tuning (RFT) using Group Relative Policy Optimization (GRPO)
-* **Experimental validation on both open-loop and closed-loop setup**
+1. **Directly integrates physical action tokens into a pretrained VLM backbone**
+    * Seamlessly integrates reasoning and action generation
+    * Adaptive switch between direct action generation and CoT reasoning
+2. **Two-stage training**
+    1. Suprervised Fine-Tuning (SFT)
+    2. Reinforcement Fine-Tuning (RFT) using Group Relative Policy Optimization (GRPO)
+3. **Experimental validation on both open-loop and closed-loop setup**
 
 ## Related Work
 * **E2E Autonomous Driving**
   * Transformer-based planning: UniAD, VAD
-  * Generative model-based planning: GenAD, DiffusionDrive
+  * Generative model-based planning: GenAD, DiffusionDrive  
   * Integrating world knowledge into E2E systems remains challenging due to bottlenecks in semantic reasoning and limited adapatability to complex scenarios.
 
-* **Vision-Language Models (VLMs) for Autonomous Driving**
+* **VLA and VLM for Autonomous Driving**
+  * Critical challenge for VLA and VLM in E2E autonomous driving: **Gap between semantic reasoning and physical action**  
+  1. Approach 1: Language-centric problem. Using VLMs for scenario understanding for caption generation or question answering.
+  2. Approach 2: VLA or VLMs for producing high-level meta actions, which are used to guide traditional planners or E2E models.
+  3. Approach 3: Direct prediction of action tokens or trajectories using VLA.
+      * Simple trajectory decoders may produce impractical trajectories, and may suffer from mode collapse.
+      * ORION utilizes generative planners, enhancing trajectory feasibility, but requires high computational resources.
+
+* Reinforcement Fine-Tuning (RFT)
+  * RFT has shown promise in enhancing the performance of LLMs, as demonstrated in DeepSeek-R1.
+  * In autonomous driving, Gen-Drive and TrajHF employed RFT to align trajectory generation with safety constraints and human driving preferences.
+  * AutoVLA utilize GRPO to optimize both reasoning and low-level planning.
+
+## Methodology
+
+### Framework
+### Reasoning Data
+### SFT
+### RFT
