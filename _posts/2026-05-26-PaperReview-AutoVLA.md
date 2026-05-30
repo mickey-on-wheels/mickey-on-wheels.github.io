@@ -1,12 +1,15 @@
 ---
 layout: post
+related_posts: false
 title: Paper Review - AutoVLA (WIP)
+categories:
+  - autonomous-driving
+  - paper-review
 description: >
-  Hydejack offers a few additional features to markup your content.
-  Don't worry, these are merely CSS classes added with kramdown's `{:...}` syntax,
-  so that your content remains compatible with other Jekyll themes.
-hide_description: true
+  This is a work in progress paper review for AutoVLA, a vision-language-action model for autonomous driving.
+hide_description: false
 sitemap: false
+image: false
 ---
 
 # Introduction
