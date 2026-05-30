@@ -12,6 +12,9 @@ sitemap: false
 image: false
 ---
 # Paper Review - AutoVLA (WIP)
+
+{:toc}
+
 ## Introduction
 
 ### From Modular-based Autonomous Driving to VLA-based Autonomous Driving
@@ -51,4 +54,9 @@ image: false
 * **Experimental validation on both open-loop and closed-loop setup**
 
 ## Related Work
+* **E2E Autonomous Driving**
+  * Transformer-based planning: UniAD, VAD
+  * Generative model-based planning: GenAD, DiffusionDrive
+  * Integrating world knowledge into E2E systems remains challenging due to bottlenecks in semantic reasoning and limited adapatability to complex scenarios.
 
+* **Vision-Language Models (VLMs) for Autonomous Driving**
