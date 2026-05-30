@@ -11,10 +11,10 @@ hide_description: false
 sitemap: false
 image: false
 ---
+# Paper Review - AutoVLA (WIP)
+## Introduction
 
-# Introduction
-
-## From Modular-based Autonomous Driving to VLA-based Autonomous Driving
+### From Modular-based Autonomous Driving to VLA-based Autonomous Driving
 * Modular-based Autonomous Driving suffers from error accumulation and lack of joint optimization across modules, leading to suboptimal performance. &rarr; Need for End-to-End (E2E) Autonomous Driving.
 
 * Conventional E2E approaches lack essential world knowledge for undertanding the environment and proper reasoning, as they primarily focus on imitating expert trajectories. Such problem becomes sever in long-tail or challenging scenarios.
@@ -23,7 +23,7 @@ image: false
 
 * Vision-Language-Action (VLA) models extend the capabilities of VLMs to action generation for embodied agents. 
 
-# Limitations of Existing VLA-based Autonomous Driving
+### Limitations of Existing VLA-based Autonomous Driving
 
 * Physically infeasible or complex structure for action generation
   * Output textual action or waypoints directly using VLMs  
