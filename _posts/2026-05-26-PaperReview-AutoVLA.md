@@ -9,7 +9,7 @@ description: >
   This is a work in progress paper review for AutoVLA, a vision-language-action model for autonomous driving.
 hide_description: false
 sitemap: false
-image: /_post_images/2026-05-26-PaperReview-AutoVLA/overview.png
+image: /post_images/2026-05-26-PaperReview-AutoVLA/overview.png
 ---
 # Paper Review - AutoVLA (WIP)
 
