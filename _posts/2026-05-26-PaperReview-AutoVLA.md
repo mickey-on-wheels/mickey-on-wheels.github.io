@@ -13,6 +13,7 @@ image: false
 ---
 # Paper Review - AutoVLA (WIP)
 
+1. this ordered seed list will be replaced by the toc
 {:toc}
 
 ## Introduction
